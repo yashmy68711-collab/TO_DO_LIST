@@ -7,16 +7,20 @@ while True:
 
     choice = input("Enter choice: ")
 
-    if choice == "1":
-        task = input("Enter task: ")
-        tasks.append(task)
-        print("Added!")
+     if task.strip() == "":
+            print("Task cannot be empty")
+        else:
+            tasks.append(task)
+            print("Added!")
 
     elif choice == "2":
-        print("\nTasks:")
-        for t in tasks:
-            print("-", t)
-
+        if len(tasks) == 0:
+            print("No tasks yet")
+        else:
+            print("\nTasks:")
+            for t in tasks:
+                print("-", t)
+                
     elif choice == "3":
         print("Bye!")
         break
